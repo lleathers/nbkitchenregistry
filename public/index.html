@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NeighborBaked Media</title>
 
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/6.6.2/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
@@ -16,14 +18,15 @@
     <script defer src="/__/firebase/init.js"></script>
 
     <style media="screen">
-      body { background: url("./images/nbasmpt02c02.jpg"); color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      body { background-image: url(./images/1099_00aa.png); background-color: #f7f7f7; font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
       #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
       #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
       #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
       #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
       #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
       #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      #qrcode { background: url(./images/qrcd.png); background-repeat: no-repeat; background-size: 100px 100px; width: 100px; height: 100px; padding: 16px; }
+      #load { color: rgba(0,0,0,95.4); text-align: center; font-size: 13px; font-weight: bold; }
       @media (max-width: 600px) {
         body, #message { margin-top: 0; background: white; box-shadow: none; }
         body { border-top: 16px solid #ffa100; }
@@ -32,10 +35,13 @@
   </head>
   <body>
     <div id="message">
-      <h2>Welcome to NeighborBaked Media</h2>
-      <h1>NeighborBaked, the Video Game</h1>
-      <p>I, Larry, invited your business to be in a video game.</p>
-      <a target="_blank" href="https://mailchi.mp/90ac5a5a986e/neighborbaked">*Join Your Neighborhood!</a>
+      <h2><img src="favicon.png"> Welcome to NeighborBaked Media!</h2>
+      <h1>NeighborBaked, Your Kitchen Registry</h1>
+      <p>I, Larry(co-Founder), just invited your business to gift or be gifted! You and your kitchen manager explicitly define & authorize gifting scope for B2B introductions. Deliver Healthy manages kitchen fulfillment worldwide.</p>
+
+<div id="qrcode"></div>
+
+      <a target="_blank" href="https://mailchi.mp/95adba6b9806/neighborbaked">*Register Free!</a>
     </div>
     <p id="load">Firebase SDK Loading&hellip;</p>
 
@@ -57,7 +63,7 @@
 
           // document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
 
-          document.getElementById('load').innerHTML = `*Clicking Join Your Neighborhood, sends you to our secure MailChimp form.`;
+          document.getElementById('load').innerHTML = `*Clicking Register Free, sends you to our secure MailChimp form.`;
 
         } catch (e) {
           console.error(e);
